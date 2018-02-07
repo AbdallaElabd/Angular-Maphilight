@@ -18,7 +18,7 @@
               <div class="col-sm-offset-3 col-sm-9">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" ng-model="config.alwaysOn"> Always On
+                    <input type="checkbox" [(ngModel)]="config.alwaysOn" [value]="true" name="alwaysOn"> Always On
                   </label>
                 </div>
               </div>
@@ -27,7 +27,7 @@
               <div class="col-sm-offset-3 col-sm-9">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" ng-model="config.neverOn"> Never On
+                    <input type="checkbox" [(ngModel)]="config.neverOn" [value]="true" name="neverOn" /> Never On
                   </label>
                 </div>
               </div>
@@ -36,7 +36,7 @@
               <div class="col-sm-offset-3 col-sm-9">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" ng-model="config.fade"> Fade
+                    <input type="checkbox" [(ngModel)]="config.fade" [value]="true" name="fade" /> Fade
                   </label>
                 </div>
               </div>
@@ -55,7 +55,7 @@
               <div class="col-sm-offset-3 col-sm-9">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" ng-model="config.stroke"> Stroke
+                    <input type="checkbox" [(ngModel)]="config.stroke" [value]="true" name="stroke" /> Stroke
                   </label>
                 </div>
               </div>
@@ -63,19 +63,19 @@
             <div class="form-group">
               <label for="strokeColor" class="col-sm-3 control-label">Stroke Color</label>
               <div class="col-sm-9">
-                <input type="color" class="form-control" id="strokeColor" placeholder="Stroke Color"  ng-model="config.strokeColor">
+                <input type="color" class="form-control" id="strokeColor" placeholder="Stroke Color" [(ngModel)]="config.strokeColor" name="strokeColor" />
               </div>
             </div>
             <div class="form-group">
               <label for="strokeWidth" class="col-sm-3 control-label">Stroke Width</label>
               <div class="col-sm-9">
-                <input type="number" step="0.5" class="form-control" id="strokeWidth" placeholder="Stroke Width"  ng-model="config.strokeWidth">
+                <input type="number" step="0.5" class="form-control" id="strokeWidth" placeholder="Stroke Width" [(ngModel)]="config.strokeWidth" name="strokeWidth" />
               </div>
             </div>
             <div class="form-group">
               <label for="strokeOpacity" class="col-sm-3 control-label">Stroke Opacity</label>
               <div class="col-sm-9">
-                <input type="number" step="0.1" class="form-control" id="strokeOpacity" placeholder="Stroke Opacity"  ng-model="config.strokeOpacity">
+                <input type="number" step="0.1" class="form-control" id="strokeOpacity" placeholder="Stroke Opacity" [(ngModel)]="config.strokeOpacity" name="strokeOpacity" />
               </div>
             </div>
           </form>
@@ -93,7 +93,7 @@
               <div class="col-sm-offset-3 col-sm-9">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" ng-model="config.fill"> Fill
+                    <input type="checkbox" [(ngModel)]="config.fill" [value]="true" name="fill" /> Fill
                   </label>
                 </div>
               </div>
@@ -101,13 +101,13 @@
             <div class="form-group">
               <label for="fillColor" class="col-sm-3 control-label">Fill Color</label>
               <div class="col-sm-9">
-                <input type="color" class="form-control" id="fillColor" placeholder="Fill Color"  ng-model="config.fillColor">
+                <input type="color" class="form-control" id="fillColor" placeholder="Fill Color" [(ngModel)]="config.fillColor" name="fillColor" />
               </div>
             </div>
             <div class="form-group">
               <label for="fillOpacity" class="col-sm-3 control-label">Fill Opacity</label>
               <div class="col-sm-9">
-                <input type="number" step="0.1" class="form-control" id="fillOpacity" placeholder="Fill Opacity"  ng-model="config.fillOpacity">
+                <input type="number" step="0.1" class="form-control" id="fillOpacity" placeholder="Fill Opacity" [(ngModel)]="config.fillOpacity" name="fillOpacity" />
               </div>
             </div>
           </form>
@@ -128,7 +128,7 @@
               <div class="col-sm-offset-3 col-sm-9">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" ng-model="config.shadow"> Shadow
+                    <input type="checkbox" [(ngModel)]="config.shadow" [value]="true" name="shadow" /> Shadow
                   </label>
                 </div>
               </div>
@@ -137,19 +137,19 @@
             <div class="form-group">
               <label for="shadowColor" class="col-sm-3 control-label">Shadow Color</label>
               <div class="col-sm-9">
-                <input type="color" class="form-control" id="shadowColor" placeholder="Shadow Color"  ng-model="config.shadowColor">
+                <input type="color" class="form-control" id="shadowColor" placeholder="Shadow Color" [(ngModel)]="config.shadowColor" name="shadowColor" />
               </div>
             </div>
             <div class="form-group">
               <label for="shadowRadius" class="col-sm-3 control-label">Shadow Radius</label>
               <div class="col-sm-9">
-                <input type="number" step="1" class="form-control" id="shadowRadius" placeholder="Shadow Radius"  ng-model="config.shadowRadius">
+                <input type="number" step="1" class="form-control" id="shadowRadius" placeholder="Shadow Radius" [(ngModel)]="config.shadowRadius" name="shadowRadius" />
               </div>
             </div>
             <div class="form-group">
               <label for="shadowOpacity" class="col-sm-3 control-label">Shadow Opacity</label>
               <div class="col-sm-9">
-                <input type="number" step="0.1" class="form-control" id="shadowOpacity" placeholder="Shadow Opacity"  ng-model="config.shadowOpacity">
+                <input type="number" step="0.1" class="form-control" id="shadowOpacity" placeholder="Shadow Opacity" [(ngModel)]="config.shadowOpacity" name="shadowOpacity" />
               </div>
             </div>
           </form>
@@ -161,10 +161,11 @@
     </div>
     <div class="col-md-6">
       <div class="well">
-        <angular-maphilight
-        id="statesMap"
-        angular-maphilight-config="config">
-        <img src="documentation/images/states_imgmap.gif" width="480" height="330" class="img-responsive">
+        <maphilight
+          id="statesMap"
+          [config]="config"
+        >
+        <img src="{{image}}" width="480" height="330" class="img-responsive">
 
         <map>
           <area shape="poly"
@@ -354,7 +355,7 @@
           coords="422,71,427,67,426,63,427,59,434,54,434,49,441,47,445,44,441,40,436,35,433,21,428,18,425,20,421,19,419,21,419,26,417,31,416,36,418,38,416,41,416,45,414,46"
           alt="State Profile: Maine" title="State Profile: Maine">
         </map>
-      </angular-maphilight>
+      </maphilight>
     </div>
     <div class="panel panel-success">
       <div class="panel-heading">

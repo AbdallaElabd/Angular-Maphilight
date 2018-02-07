@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-inner">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" uiSref="home">Angular MapHilight</a>
+        </div>
+
+        <div class="collapse navbar-collapse" uib-collapse="navCollapsed">
+            <ul class="nav navbar-nav">
+                <li><a uiSref="home">Home</a></li>
+                <li uib-dropdown>
+                    <a uib-dropdown-toggle href="">Examples <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a uiSref="example1">Example 1</a></li>
+                        <li><a uiSref="example2">Example 2</a></li>
+                        <li><a uiSref="example3">Example 3</a></li>
+                    </ul>
+                </li>
+                <li><a uiSref="contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Angular Maphilight</h1>
+        <p>Spice up your HTML image maps with Angular and highlighting!</p>
+    </div>
+</div>
+
+<div class="ui-view-container">
+    <div ui-view></div>
+</div>
+
